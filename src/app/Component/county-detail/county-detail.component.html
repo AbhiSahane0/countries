@@ -1,0 +1,55 @@
+<div class="container">
+  <!-- Navbar (Reuse the existing component) -->
+  <!-- <app-navbar></app-navbar> -->
+
+  <!-- Back Button -->
+  <div class="mt-4 mb-4">
+    <button (click)="goBack()" class="btn btn-outline-secondary">
+      <i class="bi bi-arrow-left"></i> Back
+    </button>
+  </div>
+
+  <!-- Country Detail Section -->
+  <div class="row mt-4">
+    <!-- Flag -->
+    <div class="col-12 col-md-6">
+      <img
+        [src]="country.flag"
+        alt="{{ country.name }} Flag"
+        class="img-fluid"
+      />
+    </div>
+
+    <!-- Country Info -->
+    <div class="col-12 col-md-6">
+      <h2>{{ country.name }}</h2>
+      <p><strong>Native Name:</strong> {{ country.nativeName }}</p>
+      <p><strong>Population:</strong> {{ country.population }}</p>
+      <p><strong>Region:</strong> {{ country.region }}</p>
+      <p><strong>Sub Region:</strong> {{ country.subregion }}</p>
+      <p><strong>Capital:</strong> {{ country.capital }}</p>
+      <p><strong>Top Level Domain:</strong> {{ country.topLevelDomain[0] }}</p>
+      <p><strong>Currencies:</strong> {{ country.currencies[0].name }}</p>
+      <p>
+        <strong>Languages:</strong>
+        <span *ngFor="let lang of country.languages; let last = last"
+          >{{ lang.name }}{{ !last ? ", " : "" }}</span
+        >
+      </p>
+
+      <!-- Border Countries -->
+      <div>
+        <p><strong>Border Countries:</strong></p>
+        <ng-container *ngIf="country.borders.length > 0; else noBorders">
+          <button
+            *ngFor="let border of country.borders"
+            class="btn btn-outline-secondary me-1"
+          >
+            {{ getCountryNameByCode(border) }}
+          </button>
+        </ng-container>
+        <ng-template #noBorders>No bordering countries</ng-template>
+      </div>
+    </div>
+  </div>
+</div>

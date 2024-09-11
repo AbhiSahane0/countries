@@ -1,0 +1,7 @@
+.search-dropdown-components-container {
+    display: flex;
+    /* Use Flexbox layout */
+    align-items: center;
+    /* Align items vertically center */
+
+}

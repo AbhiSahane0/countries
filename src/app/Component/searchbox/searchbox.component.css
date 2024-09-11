@@ -1,0 +1,36 @@
+.search-filter-container {
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.search-input {
+    height: 50px;
+    /* Height to match the Figma design */
+    padding: 10px;
+    font-size: 1.1rem;
+    /* Adjust the font size */
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    /* Rounded corners */
+}
+
+.filter-dropdown {
+    height: 50px;
+    /* Same height as search bar */
+    padding: 10px;
+    font-size: 1.1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+
+    /* Responsive adjustments for smaller screens */
+    .search-filter-container {
+        padding: 0 10px;
+    }
+
+    .filter-dropdown {
+        margin-top: 10px;
+    }
+}

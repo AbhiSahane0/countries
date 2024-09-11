@@ -1,0 +1,26 @@
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+button {
+    font-size: 16px;
+}
+
+img {
+    width: 100%;
+    /* Full-width flag */
+    border-radius: 5px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+.btn-outline-secondary {
+    margin-bottom: 10px;
+}

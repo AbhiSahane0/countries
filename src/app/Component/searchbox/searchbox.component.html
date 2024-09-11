@@ -1,0 +1,30 @@
+<div class="container-fluid search-filter-container">
+  <div class="row">
+    <!-- Search bar (Left) -->
+    <div class="col-12 col-md-6">
+      <input
+        type="text"
+        class="form-control search-input"
+        placeholder="Search for a country..."
+        (input)="onSearch($event)"
+      />
+    </div>
+
+    <!-- Filter by Region Dropdown (Right) -->
+    <div class="col-12 col-md-3 ml-md-auto mt-3 mt-md-0">
+      <select
+        class="form-control filter-dropdown"
+        (change)="onRegionChange($event)"
+      >
+        <option disabled selected>Filter by Region</option>
+        <option value="">All</option>
+        <!-- Added an "All" option to clear the filter -->
+        <option value="Africa">Africa</option>
+        <!-- <option value="America">Americas</option> -->
+        <option value="Asia">Asia</option>
+        <option value="Europe">Europe</option>
+        <option value="Oceania">Oceania</option>
+      </select>
+    </div>
+  </div>
+</div>

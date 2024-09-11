@@ -1,0 +1,24 @@
+.navbar {
+    padding: 20px;
+    background-color: white;
+    /* Use the color from your Figma design */
+    border-bottom: 1px solid #e0e0e0;
+    /* A subtle bottom border for the navbar */
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.5rem;
+    /* Adjust the font size to match the Figma design */
+}
+
+.navbar-text {
+    font-weight: 500;
+    font-size: 1.1rem;
+    /* Slightly smaller font size for Dark Mode text */
+}
+
+.ml-auto {
+    margin-left: auto;
+    /* Ensures the Dark Mode text is on the far right */
+}

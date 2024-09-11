@@ -1,0 +1,17 @@
+<div class="country-card-container">
+  <div
+    class="country-card"
+    *ngFor="let country of countries"
+    (click)="navigateToDetail(country.name)"
+  >
+    <div class="country-flag">
+      <img [src]="country.flag" alt="{{ country.name }} Flag" />
+    </div>
+    <div class="country-info">
+      <h3 class="country-name">{{ country.name }}</h3>
+      <p><strong>Population:</strong> {{ country.population }}</p>
+      <p><strong>Region:</strong> {{ country.region }}</p>
+      <p><strong>Capital:</strong> {{ country.capital }}</p>
+    </div>
+  </div>
+</div>
